@@ -19,3 +19,9 @@ script:
   - coverage run --branch --source=. ./manage.py test store --keepdb --with-xunit
   - coverage xml
   - python-codacy-coverage -r coverage.xml
+notifications:
+  email:
+    recipients:
+      - alesansaa@alum.us.es
+    on_success: change
+    on_failure: always
